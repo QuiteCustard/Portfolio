@@ -1,0 +1,28 @@
+#main-content, #about, #projects .container-wrapper, #contact {
+    background-color: var(--portfolio);
+    color: var(--text);
+}
+
+#intro {
+    color: var(--text);
+    clip-path: ellipse(134% 100% at 41.05% 0%);
+}
+
+#intro, #tech-stack, #projects {
+    background-color: var(--secondary);
+    color:var(--text);
+}
+
+#about, #projects, #projects .container-wrapper {
+    color:var(--text-inverse);
+}
+
+#tech-stack {
+    clip-path: ellipse(197% 94% at 50% 94%);
+    padding:6rem 0;
+}
+
+#projects .container-wrapper {
+    clip-path: ellipse(197% 94% at 50% 94%);
+    padding: 3rem 0;
+}

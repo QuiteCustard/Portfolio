@@ -1,0 +1,94 @@
+.skip-nav {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    position: absolute;
+    transform: translateY(-120%);
+    transition: 250ms;
+    padding: 0.7em;
+    background-color: white;
+    color: black;
+}
+
+.skip-nav:focus {
+    transform: translateY(0);
+}
+
+.primary-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    background: transparent;
+}
+
+.nav a, .toggle {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    transition: 250ms;
+    color: var(--text);
+    cursor: pointer;
+    background-color: inherit;
+    border:0;
+}
+
+.block-wrapper {
+    display: flex;
+    gap:3rem;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex:1;
+
+    .block {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            font-weight: 400;
+            font-size: clamp(1.4rem, 12vw, 4rem);
+        }
+    }
+}
+
+.aboutme-block {
+
+}
+
+.project-block {
+
+}
+
+.tech-block {
+
+}
+
+.contact-block {
+
+}
+
+.theme-wrapper {
+    width:100%;
+    border-top: 1px solid #e7e7e7;
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    padding-top: 10px;
+
+    .theme-btn {
+        border: 1px white solid;
+        border-radius: 50%;
+        padding: 10px;
+        cursor:pointer;
+
+        &[data-colour='pink']{
+            background-color: #f5d6d6;
+        }
+
+        &[data-colour='purple']{
+            background-color: rgb(103, 58, 183);
+        }
+
+        &[data-colour='dark']{
+            background-color: #2A2C2C;
+        }
+    }
+}

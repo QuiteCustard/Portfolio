@@ -1,0 +1,7 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="1440" height="320">
+	<title>wave-svg</title>
+	<style>
+		.s0 { fill: #673ab7 } 
+	</style>
+	<path id="Layer" class="s0" d="m1440 64l-60-10.7c-60-10.3-180-32.3-300-32c-120-0.3-240 21.7-360 32c-120 10.7-240 10.7-360 42.7c-120 32-240 96-300 128l-60 32v-256h60c60 0 180 0 300 0q180 0 360 0q180 0 360 0c120 0 240 0 300 0h60z" />
+</svg>
