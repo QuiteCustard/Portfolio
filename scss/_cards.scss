@@ -38,8 +38,8 @@
         left: 0;
         transition: 300ms;
     }
+
     > * {
-        transition: 300ms;
         opacity: 0;
     }
 
@@ -100,6 +100,7 @@
 
         &:hover, &:focus {
             background-color: var(--cbd);
+            color:black;
         }
     }
 
@@ -147,6 +148,7 @@
 
         &:hover, &:focus {
             background-color: var(--management);
+            color:black;
         }
     }
 
@@ -175,6 +177,7 @@
 
         &:hover, &:focus {
             background-color: var(--crb);
+            color:black;
         }
     }
 
