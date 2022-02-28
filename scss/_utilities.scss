@@ -94,6 +94,7 @@
     @media (min-width:1024px){
         gap:20rem;
         margin:0;
+        padding: 7rem;
     }
 }
 
@@ -150,6 +151,5 @@
     > * {
         padding: 1px;
         font-size: clamp(1rem, 5vw, 1.15rem);
-        color: #b3b3b3;
     }
 }

@@ -53,6 +53,7 @@
         font-size:1rem;
         padding:8px;
         background-color: transparent;
+        color: var(--card-btn);
     }
 
     &:hover, &:focus-within {
@@ -198,6 +199,7 @@
 
         &:hover, &:focus {
             background-color: var(--portfolio);
+            color:black;
         }
     }
 

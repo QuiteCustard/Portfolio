@@ -10,6 +10,7 @@
     --text-inverse:white;
     --hover:rgb(80, 47, 136);
     --btn:white;
+    --card-btn:white;
 }
 
 [data-theme="dark"] {
@@ -19,6 +20,7 @@
     --text-inverse:white;
     --hover:rgb(18, 19, 19);
     --btn:white;
+    --card-btn:white;
 }
 
 [data-theme="pink"] {
@@ -27,6 +29,7 @@
     --hover:#bea3a3;
     --text-inverse:rgb(0, 0, 0);
     --btn:black;
+    --card-btn:white;
 }
 
 html {

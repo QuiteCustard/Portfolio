@@ -63,9 +63,12 @@ function runObserver(){
 runObserver();
 
 function deleteNav() {
+    toggle.innerHTML = '<i class="fas fa-bars"></i>Menu';
+
     let menuWrapper = document.querySelector('.menu-wrapper');
     toggle.classList.toggle('hidden');
     menuWrapper.classList.remove('show');
+
     headerReset();
     setTimeout(function () {
         menuWrapper.remove();
@@ -109,25 +112,61 @@ function elementCreator() {
 
     let link = document.createElement('a'); 
     link.href ='#about';
+    link.classList.add('nav-link');
     link.textContent = 'About me';
     nav.appendChild(link);
 
     link = document.createElement('a'); 
     link.href ='#tech-stack';
+    link.classList.add('nav-link');
     link.textContent = 'Tech';
-
     nav.appendChild(link);
+
     link = document.createElement('a'); 
     link.href ='#projects';
+    link.classList.add('nav-link');
     link.textContent = 'Projects';
     nav.appendChild(link);
 
-    nav.appendChild(link);
     link = document.createElement('a'); 
     link.href ='#contact';
+    link.classList.add('nav-link');
     link.textContent = 'Contact me';
     nav.appendChild(link);
 
+    let links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', deleteNav);
+    })
+
+    let iconsWrapper = document.createElement('div');
+    iconsWrapper.classList.add('icons');
+    nav.appendChild(iconsWrapper);
+
+    let iconWrapper = document.createElement('a');
+    iconWrapper.href = '#';
+    iconsWrapper.appendChild(iconWrapper);
+
+    let icon = document.createElement('i');
+    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
+    iconWrapper.appendChild(icon);
+
+    iconWrapper = document.createElement('a');
+    iconWrapper.href = '#';
+    iconsWrapper.appendChild(iconWrapper);
+
+    icon = document.createElement('i');
+    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
+    iconWrapper.appendChild(icon);
+
+    iconWrapper = document.createElement('a');
+    iconWrapper.href = '#';
+    iconsWrapper.appendChild(iconWrapper);
+
+    icon = document.createElement('i');
+    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
+    iconWrapper.appendChild(icon);
+    
     let themeBtns = document.createElement('div');
     themeBtns.classList.add('theme-wrapper');
     menu.appendChild(themeBtns);
@@ -184,7 +223,6 @@ function navMenu() {
         }, 30);
     } else {
         deleteNav();
-        toggle.innerHTML = '<i class="fas fa-bars"></i>Menu';
     }
 }
 

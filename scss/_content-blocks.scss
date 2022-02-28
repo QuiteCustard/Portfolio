@@ -1,4 +1,4 @@
-#main-content, #about, #projects .container-wrapper, #contact {
+#main-content, #about, #projects .container-wrapper {
     background-color: var(--portfolio);
     color: var(--text);
 }
@@ -8,7 +8,7 @@
     clip-path: ellipse(134% 100% at 41.05% 0%);
 }
 
-#intro, #tech-stack, #projects {
+#intro, #tech-stack, #projects, #contact {
     background-color: var(--secondary);
     color:var(--text);
 }
