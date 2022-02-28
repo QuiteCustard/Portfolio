@@ -19,10 +19,20 @@
 
 #tech-stack {
     clip-path: ellipse(197% 94% at 50% 94%);
-    padding:6rem 0;
+
+    @media (min-width:1024px){
+        padding:11.5rem 0;
+    }
+}
+
+#projects {
+    padding-top:3rem;
 }
 
 #projects .container-wrapper {
     clip-path: ellipse(197% 94% at 50% 94%);
-    padding: 3rem 0;
+
+    @media (min-width:1024px){
+        padding: 3rem 0;
+    }
 }
