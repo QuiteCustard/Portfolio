@@ -5,7 +5,7 @@
         <header class="header">
             <a class="skip-nav" href="#main-content">Skip to content</a>
             <nav class="primary-nav nav" role="navigation">
-                <a href="" class="logo">...</a>
+                <a href="" class="logo">Sam Edwards</a>
                 <button class="toggle hidden"><i class="fas fa-bars"></i>Menu</button>
             </nav>
         </header>
