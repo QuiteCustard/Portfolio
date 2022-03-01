@@ -91,6 +91,7 @@ body {
 
     @media (min-width:1024px){
         display: grid;
+        padding-top:0;
 
         &-content {
             padding: 0;
