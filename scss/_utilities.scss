@@ -19,11 +19,12 @@
     cursor: pointer;
     font-size: clamp(1.15rem, 5vw, 1.3rem);
     width: fit-content;
+
+    &:hover, &:focus {
+        background-color: var(--hover);
+    }
 }
 
-.button:hover {
-    background-color: var(--hover);
-}
 
 .explore-wrapper {
     flex: 1;
@@ -31,45 +32,45 @@
     align-items: flex-end;
     justify-content: center;
     width: 100%;
-}
 
-.explore {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: clamp(1rem, 6vw, 2rem);
-    transition: 0.3s;
-    justify-content: flex-end;
-    color: var(--text);
-    margin: 3.2rem;
-    opacity: 0.6;
-
-    &:hover,
-    &.explore:focus {
-        transform: scale(1.1);
-
-        i {
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            20%,
-            100% {
-                transform: translateY(0);
+    .explore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: clamp(1rem, 6vw, 2rem);
+        transition: 0.3s;
+        justify-content: flex-end;
+        color: var(--text);
+        margin: 3.2rem;
+        opacity: 0.6;
+    
+        &:hover, &:focus {
+            transform: scale(1.1);
+    
+            i {
+                animation: bounce 2s infinite;
             }
-
-            40% {
-                transform: translateY(2px);
-            }
-
-            60% {
-                transform: translateY(4px);
+    
+            @keyframes bounce {
+    
+                0%,
+                20%,
+                100% {
+                    transform: translateY(0);
+                }
+    
+                40% {
+                    transform: translateY(2px);
+                }
+    
+                60% {
+                    transform: translateY(4px);
+                }
             }
         }
     }
 }
+
 
 .img {
     width: 100%;
@@ -125,7 +126,6 @@
       }
     }
 }
-  
 
 .icons {
     display: flex;
@@ -147,7 +147,7 @@
     display: flex;
     align-items: center;
 
-    > * {
+    & * {
         padding: 1px;
         font-size: clamp(1rem, 5vw, 1.15rem);
     }

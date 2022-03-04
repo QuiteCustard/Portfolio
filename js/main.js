@@ -13,15 +13,14 @@ const img = document.querySelector('.hero > .img');
 function setColour(entryTarget) {
     let cssObj = getComputedStyle(entryTarget);
     let bg = cssObj.getPropertyValue('background-color');
-
-    if (toggle.classList.contains('hidden')) {
+    if(toggle.classList.contains('hidden')){
+        
         header.style.backgroundColor = bg;
-    } else {
+    }
+    else {
         header.style.backgroundColor = 'transparent';
     }
-
-    menuHolder.style.backgroundColor = bg;
-
+    
     if (header.style.backgroundColor == colour.trim()){
         headerNav.forEach(link => {
             link.style.color = 'white';
@@ -69,13 +68,11 @@ function deleteNav() {
     toggle.classList.toggle('hidden');
     menuWrapper.classList.remove('show');
 
-    headerReset();
     setTimeout(function () {
         menuWrapper.remove();
     }, 450);
     
     runObserver();
-    return;
 }
 
 
@@ -107,7 +104,7 @@ function elementCreator() {
     menu.appendChild(heading);
 
     let nav = document.createElement('nav');
-    nav.classList.add('nav');
+    nav.classList.add('nav', 'secondary-nav');
     menu.appendChild(nav);
 
     let link = document.createElement('a'); 
@@ -141,7 +138,7 @@ function elementCreator() {
 
     let iconsWrapper = document.createElement('div');
     iconsWrapper.classList.add('icons');
-    nav.appendChild(iconsWrapper);
+    menu.appendChild(iconsWrapper);
 
     let iconWrapper = document.createElement('a');
     iconWrapper.href = '#';
@@ -188,26 +185,13 @@ function elementCreator() {
     themeBtn.dataset.colour = 'dark';
     themeBtn.value = 'dark';
     themeBtns.appendChild(themeBtn);
-
-    return;
 }
 
-function headerReset() {
-    if(toggle.classList.contains('hidden')){
-        header.style.backgroundColor = '';
-    }
-    else {
-        header.style.backgroundColor = 'transparent';
-    }
-    toggle.style.color = '';
-    return;
-}
 
 function navMenu() {
     if (toggle.classList.contains('hidden')) {
         toggle.classList.toggle('hidden');
         elementCreator();
-        headerReset();
         let menuWrapper = document.querySelector('.menu-wrapper');
 
         toggle.innerHTML = '<i class="fa-solid fa-x"></i>Menu';
