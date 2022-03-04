@@ -89,33 +89,27 @@
                     <h2 class="container-title">Projects</h2>
                     <div class="cards">
                         <div class="card management">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
-                            <a href="#" class="button">Click to read more</a>
+                            <p></p>
+                            <a href="https://ws269058-wad.remote.ac" class="button">Click to view site</a>
                         </div>
                         <div class="card cbd">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
-                            <a href="#" class="button">Click to read more</a>
+                            <p></p>
+                            <a href="https://cbdearth.co.uk" class="button">Click to view site</a>
                         </div>
                         <div class="card argyle">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
-                            <a href="#" class="button">Click to read more</a>
+                            <p></p>
+                            <a href="https://argyleworks.co.uk" class="button">Click to read more</a>
                         </div>
                         <div class="card rcv">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
-                            <a href="#" class="button">Click to read more</a>
+                            <p></p>
+                            <a href="https://redcrowvape.remote.ac" class="button">Click to read more</a>
                         </div>
                         <div class="card crb">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
-                            <a href="#" class="button">Click to read more</a>
+                            <p></p>
+                            <a href="https://crb1.co.uk" class="button">Click to read more</a>
                         </div>
                         <div class="card portfolio">
-                            <p>Red Crow Vape is another site I had complete creative control over due to the same
-                                reasons as above.</p>
+                            <p></p>
                             <a href="#" class="button">Click to read more</a>
                         </div>
                     </div>
