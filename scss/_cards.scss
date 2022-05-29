@@ -200,7 +200,7 @@
 
 .iot {
     background-image: var(--iot);
-    background-size: cover;
+    background-size: 200%;
     border: 0;
 
     &::before {
@@ -217,6 +217,7 @@
 
         &:hover, &:focus {
             background: var(--iot);
+            background-size: 200%;
             color:black;
             border-color: unset;
         }
