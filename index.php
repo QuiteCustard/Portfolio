@@ -107,35 +107,38 @@
                     <div class="cards">
                         <div class="card management">
                             <p></p>
-                            <a href="https://ws269058-wad.remote.ac" class="button">Click to view site</a>
+                            <a href="https://ws269058-wad.remote.ac" class="button" rel="external">View site</a>
+                            <a href="https://github.com/WS269058/MultiAccessPlatform" class="button" rel="external">View GitHub repo</a>
                         </div>
-                        <div class="card cbd">
+                        <!-- <div class="card cbd">
                             <p></p>
-                            <a href="https://cbdearth.co.uk" class="button">Click to view site</a>
-                        </div>
+                            <a href="https://cbdearth.co.uk" class="button" rel="external">View site</a>
+                        </div> -->
                         <div class="card argyle">
                             <p></p>
-                            <a href="https://argyleworks.co.uk" class="button">Click to read more</a>
+                            <a href="https://argyleworks.co.uk" class="button" rel="external">View site</a>
                         </div>
                         <div class="card rcv">
                             <p></p>
-                            <a href="https://redcrowvape.remote.ac" class="button">Click to read more</a>
+                            <a href="https://redcrowvape.remote.ac" class="button" rel="external">View site</a>
                         </div>
                         <div class="card crb">
                             <p></p>
-                            <a href="https://crb1.co.uk" class="button">Click to read more</a>
+                            <a href="https://crb1.co.uk" class="button" rel="external">View site</a>
                         </div>
                         <div class="card portfolio">
                             <p></p>
-                            <a href="#" class="button">Click to read more</a>
+                            <a href="https://github.com/WS269058/Portfolio" class="button" rel="external">View GitHub repo</a>
                         </div>
                         <div class="card iot">
                             <p></p>
-                            <a href="#" class="button">Click to read more</a>
+                            <a href="https://ws269058-iot.remote.ac" class="button" rel="external">View site</a>
+                            <a href="https://github.com/WS269058/IOT" class="button" rel="external">View GitHub repo</a>
                         </div>
                         <div class="card awt">
                             <p></p>
-                            <a href="#" class="button">Click to read more</a>
+                            <a href="https://ws269058-awt.remote.ac" class="button" rel="external">View site</a>
+                            <a href="https://github.com/WS269058/ThemeDev" class="button" rel="external">View GitHub repo</a>
                         </div>
                     </div>
                 </div>
