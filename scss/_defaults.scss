@@ -5,12 +5,15 @@
     --crb: #98e9f5;
     --management: #dc65f3;
     --portfolio: rgb(103, 58, 183);
+    --awt:#f78da7;
+    --iot:linear-gradient(-45deg, #d3d3d3, #5b5bff, #ff3ec5b4, #23d5ab);
     --secondary:#fff8f8;
     --text:black;
     --text-inverse:white;
     --hover:rgb(80, 47, 136);
     --btn:white;
     --card-btn:white;
+    --accent: var(--portfolio);
 }
 
 [data-theme="dark"] {
@@ -30,6 +33,7 @@
     --text-inverse:rgb(0, 0, 0);
     --btn:black;
     --card-btn:white;
+    --accent:#ff8181;
 }
 
 html {

@@ -1,0 +1,134 @@
+@import '_navigation';
+
+.buttons {
+    margin: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    background: var(--portfolio);
+    color: var(--btn);
+    border-radius: 5px;
+    transition: 0.5s;
+    margin: 5px;
+    border: 0;
+    cursor: pointer;
+    font-size: clamp(1.15rem, 5vw, 1.3rem);
+    width: fit-content;
+
+    &:hover, &:focus {
+        background-color: var(--hover);
+    }
+}
+
+.icons {
+    display: flex;
+
+    a {
+        padding: 10px;
+        color: var(--text);
+
+        &:hover .icon,
+        &:focus .icon {
+            transition: 0.5s;
+            color: var(--hover);
+        }
+
+        i {
+            font-size: clamp(2rem, 5vw, 2.2rem);
+        }
+    }
+}
+
+.explore-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+
+    .explore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: clamp(1rem, 6vw, 2rem);
+        transition: 0.3s;
+        justify-content: flex-end;
+        color: var(--text);
+        margin: 3.2rem;
+        opacity: 0.6;
+    
+        &:hover, &:focus {
+            transform: scale(1.1);
+    
+            i {
+                animation: bounce 2s infinite;
+            }
+    
+            @keyframes bounce {
+    
+                0%,
+                20%,
+                100% {
+                    transform: translateY(0);
+                }
+    
+                40% {
+                    transform: translateY(2px);
+                }
+    
+                60% {
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }
+}
+
+.img {
+    width: 100%;
+}
+
+.tech-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:7rem;
+    margin-top: 3rem;
+
+    @media (min-width:1024px){
+        gap:20rem;
+        margin:0;
+    }
+}
+
+.tech-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    color:var(--accent);
+
+    i {
+        font-size: clamp(200px, 16vw, 400px);
+        color:var(--accent);
+    }
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+
+    & * {
+        padding: 1px;
+        font-size: clamp(1rem, 5vw, 1.15rem);
+    }
+}
+
+@import '_cards';

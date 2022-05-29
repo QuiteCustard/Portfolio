@@ -1,213 +1,106 @@
 import './theme.js';
 
 const toggle = document.querySelector('.toggle');
-const menuHolder = document.querySelector('.menu-holder');
 const sections = document.querySelectorAll('.content-block, .container-wrapper');
-let headerNav = document.querySelectorAll('.primary-nav > a, .toggle');
+const links = document.querySelectorAll('.logo, .toggle');
 const style = getComputedStyle(document.body);
-let colour = style.getPropertyValue('--portfolio');
-const header = document.querySelector('.header');
-const logo = document.querySelector('.logo');
+let primaryColour = style.getPropertyValue('--portfolio');
 const img = document.querySelector('.hero > .img');
+const menuWrapper = document.querySelector(".menu-wrapper");
+const themeBtns = document.querySelectorAll('.theme-btn');
+let el;
+let menuLinks = document.querySelectorAll("menu > a, .menu-aside");
+let header = document.querySelector("header");
 
-function setColour(entryTarget) {
-    let cssObj = getComputedStyle(entryTarget);
-    let bg = cssObj.getPropertyValue('background-color');
-    if(toggle.classList.contains('hidden')){
-        
-        header.style.backgroundColor = bg;
-    }
-    else {
-        header.style.backgroundColor = 'transparent';
-    }
-    
-    if (header.style.backgroundColor == colour.trim()){
-        headerNav.forEach(link => {
-            link.style.color = 'white';
-        })
-    } else {
-        headerNav.forEach(link => {
-            link.style.color = '';
-        })
-    }
+runObserver();
 
-    if (localStorage.getItem('theme') == 'dark') {
-        img.src = 'assets/images/white-mask.png';
-    } else {
-        img.src = 'assets/images/mask.png';
-    }
-    return;
-}
-
-
-function runObserver(){
+function runObserver() {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                let entryTarget = entry.target;
-                setColour(entryTarget);
+                el = entry.target;
+                setColour(el);
+                setBG();
             }
         });
     }, {
         rootMargin: '-2% 0px -90% 0px',
         threshold: 0
     });
-    
+
     sections.forEach(section => {
         observer.observe(section);
     });
-    
 }
 
-runObserver();
+function setColour(el) {
+    let eleStyles = getComputedStyle(el);
+    let bg = eleStyles.getPropertyValue('background-color');
 
-function deleteNav() {
-    toggle.innerHTML = '<i class="fas fa-bars"></i>Menu';
+    header.style.backgroundColor = bg;
 
-    let menuWrapper = document.querySelector('.menu-wrapper');
-    toggle.classList.toggle('hidden');
-    menuWrapper.classList.remove('show');
-
-    setTimeout(function () {
-        menuWrapper.remove();
-    }, 450);
-    
-    runObserver();
+    if (bg === primaryColour.trim() && !menuWrapper.classList.contains("show")) {
+        links.forEach(link => {
+            link.style.color = "white";
+        })
+    } else {
+        links.forEach(link => {
+            link.style.color = "";
+        })
+    }
 }
 
+// Select theme depending on which button clicked
+themeBtns.forEach((btn) => {
+    btn.addEventListener('click', handleThemeUpdate);
+})
 
 function handleThemeUpdate(e) {
     document.documentElement.setAttribute('data-theme', e.target.value);
     localStorage.setItem('theme', e.target.value);
-
-    let entryTarget = e.target;
-    setColour(entryTarget);
+    setBG();
+    el = e.target;
+    setColour(el);
 }
 
-function elementCreator() {
-    let menuWrapper = document.createElement('div');
-    menuWrapper.classList.add('menu-wrapper');
-    menuHolder.appendChild(menuWrapper);
-
-    let menuAside = document.createElement('div');
-    menuAside.classList.add('menu-aside');
-    menuWrapper.appendChild(menuAside);
-    menuAside.addEventListener('click', deleteNav);
-
-    let menu = document.createElement('div');
-    menu.classList.add('menu');
-    menuWrapper.appendChild(menu);
-
-    let heading = document.createElement('h2');
-    heading.textContent = 'Menu';
-    heading.classList.add('menu-title');
-    menu.appendChild(heading);
-
-    let nav = document.createElement('nav');
-    nav.classList.add('nav', 'secondary-nav');
-    menu.appendChild(nav);
-
-    let link = document.createElement('a'); 
-    link.href ='#about';
-    link.classList.add('nav-link');
-    link.textContent = 'About me';
-    nav.appendChild(link);
-
-    link = document.createElement('a'); 
-    link.href ='#tech-stack';
-    link.classList.add('nav-link');
-    link.textContent = 'Tech';
-    nav.appendChild(link);
-
-    link = document.createElement('a'); 
-    link.href ='#projects';
-    link.classList.add('nav-link');
-    link.textContent = 'Projects';
-    nav.appendChild(link);
-
-    link = document.createElement('a'); 
-    link.href ='#contact';
-    link.classList.add('nav-link');
-    link.textContent = 'Contact me';
-    nav.appendChild(link);
-
-    let links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-        link.addEventListener('click', deleteNav);
-    })
-
-    let iconsWrapper = document.createElement('div');
-    iconsWrapper.classList.add('icons');
-    menu.appendChild(iconsWrapper);
-
-    let iconWrapper = document.createElement('a');
-    iconWrapper.href = '#';
-    iconsWrapper.appendChild(iconWrapper);
-
-    let icon = document.createElement('i');
-    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
-    iconWrapper.appendChild(icon);
-
-    iconWrapper = document.createElement('a');
-    iconWrapper.href = '#';
-    iconsWrapper.appendChild(iconWrapper);
-
-    icon = document.createElement('i');
-    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
-    iconWrapper.appendChild(icon);
-
-    iconWrapper = document.createElement('a');
-    iconWrapper.href = '#';
-    iconsWrapper.appendChild(iconWrapper);
-
-    icon = document.createElement('i');
-    icon.classList.add('icon', 'fab', 'fa-facebook-messenger');
-    iconWrapper.appendChild(icon);
-    
-    let themeBtns = document.createElement('div');
-    themeBtns.classList.add('theme-wrapper');
-    menu.appendChild(themeBtns);
-
-    let themeBtn = document.createElement('button');
-    themeBtn.classList.add('theme-btn');
-    themeBtn.dataset.colour = 'purple';
-    themeBtn.value = 'purple';
-    themeBtns.appendChild(themeBtn);
-
-    themeBtn = document.createElement('button');
-    themeBtn.classList.add('theme-btn');
-    themeBtn.dataset.colour = 'pink';
-    themeBtn.value = 'pink';
-    themeBtns.appendChild(themeBtn);
-
-    themeBtn = document.createElement('button');
-    themeBtn.classList.add('theme-btn');
-    themeBtn.dataset.colour = 'dark';
-    themeBtn.value = 'dark';
-    themeBtns.appendChild(themeBtn);
-}
-
-
-function navMenu() {
-    if (toggle.classList.contains('hidden')) {
-        toggle.classList.toggle('hidden');
-        elementCreator();
-        let menuWrapper = document.querySelector('.menu-wrapper');
-
-        toggle.innerHTML = '<i class="fa-solid fa-x"></i>Menu';
-
-        // Select theme depending on which button clicked
-        let themeBtns = document.querySelectorAll('.theme-btn');
-        themeBtns.forEach((btn) => {
-            btn.addEventListener('click', handleThemeUpdate);
-        })
-
-        setTimeout(function () {
-            menuWrapper.classList.add('show');
-        }, 30);
+function setBG() {
+    if (localStorage.getItem('theme') === 'dark') {
+        img.src = 'assets/images/white-mask.png';
     } else {
-        deleteNav();
+        img.src = 'assets/images/mask.png';
     }
 }
 
+function navMenu() {
+    menuWrapper.classList.add("hidden");
+    let timer;
+    if (toggle.classList.contains('hidden')) {
+        toggle.innerHTML = '<i class="fa-solid fa-x"></i>Menu';
+
+        timer = setTimeout(function () {
+            menuWrapper.classList.add('show');
+
+            links.forEach(link => {
+                link.style.color = "";
+            })
+
+        }, 100);
+    } else {
+        toggle.innerHTML = '<i class="fas fa-bars"></i>Menu';
+
+        timer = setTimeout(function () {
+            menuWrapper.classList.remove('hidden');
+        }, 300);
+
+        menuWrapper.classList.remove('show');
+    }
+
+    toggle.classList.toggle('hidden');
+}
+
 toggle.addEventListener('click', navMenu);
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', navMenu);
+})
+

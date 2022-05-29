@@ -1,22 +1,45 @@
 <!doctype html>
 <html lang="en">
 <?php require_once("./_include/head.php"); ?>
-
 <body>
     <header class="header">
         <a class="skip-nav" href="#main-content">Skip to content</a>
-        <nav class="primary-nav nav" role="navigation">
-            <a href="" class="logo">Sam Edwards</a>
-            <button class="toggle hidden"><i class="fas fa-bars"></i>Menu</button>
+        <nav>
+            <div class="logo-wrapper"><a href="" class="logo">Sam Edwards</a></div>
+            <div class="button-wrapper">
+                <button class="toggle hidden"><i class="fas fa-bars"></i>Menu</button>
+            </div>
+            <div class="menu-wrapper">
+                <div class="menu-aside"></div>
+                <div class="menu">
+                    <h2>Menu</h2>
+                    <menu>
+                        <a href="#about">About me</a>
+                        <a href="#tech-stack">My stack</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact me</a>
+                    </menu>
+                    <div class="theme-wrapper">
+                        <button class="theme-btn" data-colour="purple" value="purple"></button>
+                        <button class="theme-btn" data-colour="pink" value="pink"></button>
+                        <button class="theme-btn" data-colour="dark" value="dark"></button>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="menu-holder"></div>
+    <aside id="social-media">
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/sam-edwards141" rel="external"><i class="icon fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/WS269058" rel="external"><i class="icon fa-brands fa-github"></i></a>
+        </div>
+    </aside>
     <main id="main-content">
         <section id="intro" class="content-block">
             <div class="hero">
                 <div class="hero-content">
                     <h1 class="hero-title">Sam Edwards</h1>
-                    <p>A web blah</p>
+                    <p>A web developer</p>
                     <div class="buttons">
                         <a href="mailto:samedwards9@sky.com" class="button">Contact me!</a>
                         <a href="" class="button">View My CV</a>
@@ -55,30 +78,22 @@
                     <h2 class="hero-title">My Stack:</h2>
                 </div>
                 <div class="tech-holder">
-                    <div class="tech-wrapper">
-                        <div class="tech">
-                            <h3 class="tech-heading">PHP</h3>
-                        </div>
+                    <div class="tech-wrapper html">
+                        <h3>HTML</h3>
+                        <i class="fa-brands fa-html5"></i>
                     </div>
-                    <div class="tech-wrapper">
-                        <div class="tech">
-                            <h3 class="tech-heading">PHP</h3>
-                        </div>
+                    <div class="tech-wrapper css">
+                        <h3>CSS</h3>
+                        <i class="fa-brands fa-css3-alt"></i>
                     </div>
-                    <div class="tech-wrapper">
-                        <div class="tech">
-                            <h3 class="tech-heading">PHP</h3>
-                        </div>
+                    <div class="tech-wrapper js">
+                        <i class="fa-brands fa-js" aria-label="JavaScript"></i>
                     </div>
-                    <div class="tech-wrapper">
-                        <div class="tech">
-                            <h3 class="tech-heading">PHP</h3>
-                        </div>
+                    <div class="tech-wrapper php">
+                        <i class="fa-brands fa-php" aria-label="PHP"></i>
                     </div>
-                    <div class="tech-wrapper">
-                        <div class="tech">
-                            <h3 class="tech-heading">PHP</h3>
-                        </div>
+                    <div class="tech-wrapper sql">
+                        <h3>MYSQL</h3>
                     </div>
                 </div>
             </div>
@@ -112,6 +127,14 @@
                             <p></p>
                             <a href="#" class="button">Click to read more</a>
                         </div>
+                        <div class="card iot">
+                            <p></p>
+                            <a href="#" class="button">Click to read more</a>
+                        </div>
+                        <div class="card awt">
+                            <p></p>
+                            <a href="#" class="button">Click to read more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,11 +142,10 @@
         <section id="contact" class="content-block">
             <div class="container">
                 <h2 class="container-title">Get in touch</h2>
-                <p class="">Using one of the options below</p>
+                <p>Using one of the options below</p>
                 <div class="icons">
-                    <a href="#"><i class="icon fab fa-facebook-messenger"></i></a>
-                    <a href="#"><i class="icon fab fa-instagram"></i></a>
-                    <a href="#"><i class="icon far fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/sam-edwards141" rel="external"><i class="icon fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:samedwards9@sky.com"><i class="icon far fa-envelope"></i></a>
                 </div>
             </div>
         </section>
@@ -131,10 +153,9 @@
     <footer class="footer">
         <div class="copyright">
             <i class="fas fa-copyright"></i>
-            <p>... <?php echo date("Y"); ?></p>
+            <p>Sam Edwards <?php echo date("Y"); ?></p>
         </div>
     </footer>
     <script type="module" src="js/main.js"></script>
 </body>
-
 </html>
