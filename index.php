@@ -106,7 +106,11 @@
                     <h2 class="container-title">Projects</h2>
                     <div class="cards">
                         <div class="card management">
-                            <p></p>
+                            <p>
+                                Staff training and course enrolment system.
+                                <br><br>
+                                Built with HTML, CSS, PHP, MYSQL, jQuery, and Bootstrap.
+                            </p>
                             <a href="https://ws269058-wad.remote.ac" class="button" rel="external">View site</a>
                             <a href="https://github.com/WS269058/MultiAccessPlatform" class="button" rel="external">View GitHub repo</a>
                         </div>
@@ -115,28 +119,53 @@
                             <a href="https://cbdearth.co.uk" class="button" rel="external">View site</a>
                         </div> -->
                         <div class="card argyle">
-                            <p></p>
+                            <p>
+                                Argyle works is a website for a property management company which details a public consultation for a planning proposal.
+                                <br><br>
+                                This was built with HTML, SCSS, and jQuery.
+                            </p>
                             <a href="https://argyleworks.co.uk" class="button" rel="external">View site</a>
                         </div>
                         <div class="card rcv">
-                            <p></p>
+                            <p>
+                                Red Crow Vape is a Vape website that I built using WordPress and the WooCommerce plugin.
+                                <br><br>
+                                The client wished to have an online presence as well as their physical store location to sell vaping products.
+                            </p>
                             <a href="https://redcrowvape.remote.ac" class="button" rel="external">View site</a>
                         </div>
                         <div class="card crb">
-                            <p></p>
+                            <p>
+                                CRB is a chartered account website that I built using WordPress.
+                                <br><br>
+                                WordPress was requested by the client as they wished to have a blogging platform.
+                            </p>
                             <a href="https://crb1.co.uk" class="button" rel="external">View site</a>
                         </div>
                         <div class="card portfolio">
-                            <p></p>
+                            <p>
+                                My portfolio site.
+                                <br><br>
+                                Built with HTML, SCSS, JS, and PHP.
+                            </p>
                             <a href="https://github.com/WS269058/Portfolio" class="button" rel="external">View GitHub repo</a>
                         </div>
                         <div class="card iot">
-                            <p></p>
+                            <p>
+                                Website dashboard for a virtual household management system.
+                                <br><br>
+                                Built with HTML, SCSS, JS, PHP, and SQL. 
+                            </p>
                             <a href="https://ws269058-iot.remote.ac" class="button" rel="external">View site</a>
                             <a href="https://github.com/WS269058/IOT" class="button" rel="external">View GitHub repo</a>
                         </div>
                         <div class="card awt">
-                            <p></p>
+                            <p>
+                                A WordPress theme that I built from scratch as part of my university studies.
+                                <br><br>
+                                Built with HTML, SCSS, JS, PHP, and the ACF plugin for WordPress.
+
+                            </p>
                             <a href="https://ws269058-awt.remote.ac" class="button" rel="external">View site</a>
                             <a href="https://github.com/WS269058/ThemeDev" class="button" rel="external">View GitHub repo</a>
                         </div>
