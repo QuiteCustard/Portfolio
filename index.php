@@ -15,7 +15,7 @@
                     <h2>Menu</h2>
                     <menu>
                         <a href="#about">About me</a>
-                        <a href="#tech-stack">My stack</a>
+                        <a href="#tech-stack">Technologies I use</a>
                         <a href="#projects">Projects</a>
                         <a href="#contact">Contact me</a>
                     </menu>
