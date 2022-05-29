@@ -45,7 +45,7 @@
                         <a href="" class="button">View My CV</a>
                     </div>
                 </div>
-                <img src="assets/images/mask.png" class="img">
+                <img src="assets/images/mask.png" class="img" alt="Line art of myself">
                 <div class="explore-wrapper">
                     <a class="explore" href="#about">Let's go<i class="fas fa-chevron-down"></i></a>
                 </div>
@@ -87,10 +87,12 @@
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
                     <div class="tech-wrapper js">
-                        <i class="fa-brands fa-js" aria-label="JavaScript"></i>
+                        <h3>JS</h3>
+                        <i class="fa-brands fa-js"></i>
                     </div>
                     <div class="tech-wrapper php">
-                        <i class="fa-brands fa-php" aria-label="PHP"></i>
+                        <h3>PHP</h3>
+                        <i class="fa-brands fa-php"></i>
                     </div>
                     <div class="tech-wrapper sql">
                         <h3>MYSQL</h3>
