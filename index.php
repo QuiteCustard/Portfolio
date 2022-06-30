@@ -39,7 +39,7 @@
             <div class="hero">
                 <div class="hero-content">
                     <h1 class="hero-title">Sam Edwards</h1>
-                    <p>A web developer</p>
+                    <p>Web developer</p>
                     <div class="buttons">
                         <a href="mailto:samedwards9@sky.com" class="button">Contact me!</a>
                         <a href="" class="button">View My CV</a>
@@ -55,17 +55,11 @@
             <div class="container">
                 <h2 class="container-title">About Me</h2>
                 <div class="container-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum maurisnec justo fringilla
-                        accumsan.
-                        Integer dictum ultricies ex, quis luctus quam bibendum at. Nulla sed tortor consectetur ligula
-                        tristique cursus nec eu ipsum. Mauris ut ante neque. Donec vitae sodales massa, aefficitur
-                        tortor.
+                    <p>Hi I'm Sam. I enjoy making intuitive, eye-catching, and functional websites.
+                    I finished university in 2022 with a first class honours degree. I soon picked up full time employment with Michael Paul Holidays where I am currently working as a junior developer.
                     </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dictum maurisnec justo fringilla
-                        accumsan.
-                        Integer dictum ultricies ex, quis luctus quam bibendum at. Nulla sed tortor consectetur ligula
-                        tristique cursus nec eu ipsum. Mauris ut ante neque. Donec vitae sodales massa, aefficitur
-                        tortor.
+                    <p>
+                    When I'm not developing websites, you'll find me listening to music, playing games, or playing sports with my friends.
                     </p>
                 </div>
                 <img class="img" src="assets/images/placeholder.png" alt="A photo of myself">
